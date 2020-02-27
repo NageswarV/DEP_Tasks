@@ -5,9 +5,11 @@ You have to ensure that spaces in string is a whitespace for real.
 */
 
 
-
 function countWords(str) {
-  if(str.length===0)
+  var i;
+  str=str.trim();
+  if(!str.length )//|| str.match(/^[^A-Za-z0-9]+$/))
     return 0;
-  return str.trim().split(/\s+/).length;
+    
+  return str.split(/\s+/).length;
 }
