@@ -7,72 +7,71 @@ six(dividedBy(two())); // must return 3
 
 
 */
-function zero(x) {
-  if(!x)
+function zero(operationFunction) {  if(!operationFunction) 
     return 0;
     else
-    return x(0);
+    return operationFunction(0);
 }
-function one(x) {  if(!x)
+function one(operationFunction) {  if(!operationFunction) 
     return 1;
     else
-    return x(1);
+    return operationFunction(1);
     }
-function two(x) {  if(!x)
+function two(operationFunction) {  if(!operationFunction) 
     return 2;
     else
-    return x(2);
+    return operationFunction(2);
     }
-function three(x) {  if(!x)
+function three(operationFunction) {  if(!operationFunction) 
     return 3;
     else
-    return x(3);
+    return operationFunction(3);
     }
-function four(x) {  if(!x)
+function four(operationFunction) {  if(!operationFunction) 
     return 4;
     else
-    return x(4);
+    return operationFunction(4);
     }
-function five(x) {  if(!x)
+function five(operationFunction) {  if(!operationFunction) 
     return 5;
     else
-    return x(5);
+    return operationFunction(5);
     }
-function six(x) {  if(!x)
+function six(operationFunction) {  if(!operationFunction) 
     return 6;
     else
-  return x(6);
+  return operationFunction(6);
     }
-function seven(x) {  if(!x)
+function seven(operationFunction) {  if(!operationFunction) 
     return 7;
     else
-   return x(7);
+   return operationFunction(7);
     }
-function eight(x) {  if(!x)
+function eight(operationFunction) {  if(!operationFunction) 
     return 8;
     else
-    return x(8);
+    return operationFunction(8);
     }
-function nine(x) {  if(!x)
+function nine(operationFunction) {  if(!operationFunction) 
     return 9;
     else
-    return x(9);
+    return operationFunction(9);
     }
 
-function plus(b) {
-return function (a){
-return a+b;
+function plus(value2) {
+return function (value1){
+return value1+value2;
 }
 }
-function minus(b) {
-return function (a){
-return a-b;
+function minus(value2) {
+return function (value1){
+return value1-value2;
 }}
-function times(b) {
-return function (a){
-return a*b;
+function times(value2) {
+return function (value1){
+return value1*value2;
 }}
-function dividedBy(b) {
-return function (a){
-return Math.floor(a/b);
+function dividedBy(value2) {
+return function (value1){
+return Math.floor(value1/value2);
 }}
