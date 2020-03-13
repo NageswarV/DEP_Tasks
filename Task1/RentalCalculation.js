@@ -7,11 +7,13 @@ Write a code that gives out the total amount for different days(d).
 
 
 
-function rentalCarCost(d) {
-  var total=d*40;
-  if(d>=7)
-    total=total-50;
-  else if(d>=3)
-    total  =total-20;
-    return total;
+function rentalCarCost(days) {
+  var total = days * 40;
+  if (days >= 7) {
+    total = total - 50;
+  }
+  else if (days >= 3) {
+    total = total - 20;
+  }
+  return total;
 }
