@@ -9,15 +9,19 @@ For convenience and utility, the partition function should return the boundary i
 
 // partition the items array so that all values for which pred returns true are
 // at the end, returning the index of the first true value
+
+
 function partitionOn(pred, items) {
-var itemsEven=items.filter(pred);
-itemsOdd = items.filter(function(val){
- return !pred(val);
-})
-val=itemsOdd.length;
-itemsNew=itemsOdd.concat(itemsEven);
-items.length=0;
-for(i=0;i<itemsNew.length;i++)
-  items.push(itemsNew[i]);
-return val;
+  var itemsEven = items.filter(pred);
+  itemsOdd = items.filter(function (val) {
+    return !pred(val);
+  })
+
+  val = itemsOdd.length;
+  itemsNew = itemsOdd.concat(itemsEven);
+  items.length = 0;
+  for (i = 0; i < itemsNew.length; i++) {
+    items.push(itemsNew[i]);
+  }
+  return val;
 }

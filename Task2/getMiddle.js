@@ -3,10 +3,13 @@
 If the word's length is even, return the middle 2 characters.
 */
 
-function getMiddle(s)
-{
-  if(s.length%2===0)
-    return s.substring(s.length/2-1,s.length/2+1);
-    else
-    return s.substring(s.length/2,s.length/2+1);
+function getMiddle(s) {
+  let start_index;
+  if (s.length % 2 === 0) {
+    start_index = s.length / 2 - 1;
+  }
+  else {
+    start_index = s.length / 2;
+  }
+  return s.substring(start_index, s.length / 2 + 1);
 }
