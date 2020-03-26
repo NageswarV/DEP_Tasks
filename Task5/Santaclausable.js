@@ -1,6 +1,5 @@
 /*
-We want to find out, whether a given object fulfils the requirements to implement the "SantaClausable" interface.
- We need to implement a method which checks for this interface.
+ http://www.codewars.com/kata/santaclausable-interface
 */
 
 function isSantaClausable(obj) {
