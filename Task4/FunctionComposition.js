@@ -1,14 +1,12 @@
 /*
-We want to find out, whether a given object fulfils the requirements to implement the "SantaClausable" interface.
- We need to implement a method which checks for this interface.
+Your task is to create a compose function to carry out this task, which will be passed two functions or lambdas. 
+Ruby functions will be passed, and should return, either a proc or a lambda.
+ Remember that the resulting composed function may be passed multiple arguments!
+compose(f , g)(x)
+=> f( g( x ) )
+} 
 */
 
-function isSantaClausable(obj) {
-var isSanta;
-if((typeof(obj.sayHoHoHo) === "function") && (typeof(obj.distributeGifts) === "function") && (typeof(obj.goDownTheChimney) === "function")){
-  isSanta= true;
-  } else {
-  isSanta= false;
-  }
-  return isSanta;
-  }
+function compose(functionF, functionG) {
+    return (...args) => functionF(functionG(...args));
+} 
