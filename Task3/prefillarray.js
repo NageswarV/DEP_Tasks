@@ -4,10 +4,10 @@ When throwing a TypeError, the message should be n is invalid, where you replace
 */
 
 function prefill(array_size, value) {
-  if(! /^\d+$/.test(array_size+"")){
+  if (! /^\d+$/.test(array_size + "")) {
     throw new TypeError(`${array_size} is invalid`);
   }
-  else{
-  return array_size>0?Array(array_size).fill(value) : [];
+  else {
+    return array_size > 0 ? Array(array_size).fill(value) : [];
   }
 }
