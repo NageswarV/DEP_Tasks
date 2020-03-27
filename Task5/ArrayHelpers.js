@@ -2,57 +2,26 @@
  Question Link - http://www.codewars.com/kata/array-helpers
 */
 
-Array.prototype.square=function(){
-  let arr=[];
-  for(i=0;i<this.length;i++)
-  {
-  arr[i]=this[i]*this[i];
-  }
-  return arr;
+Array.prototype.square = function () {
+  return this.map(value => value * value);
 }
-Array.prototype.cube=function(){
-  let arr=[];
-  for(i=0;i<this.length;i++)
-  {
-  arr[i]=this[i]*this[i]*this[i];
-  }
-  return arr;
+Array.prototype.cube = function () {
+  return this.map(value => value * value * value);
 }
-Array.prototype.sum=function(){
-  let sum=0;
-  for(i=0;i<this.length;i++)
-  {
-  sum+=this[i];
-  }
-  return sum;
+Array.prototype.sum = function () {
+  if (!this.length)
+    return NaN;
+  return this.reduce((sum, currentValue) => sum + currentValue);
 }
-Array.prototype.average=function(){
-   let sum=0;
-  for(i=0;i<this.length;i++)
-  {
-  sum+=this[i];
-  }
-  return sum/this.length;
+Array.prototype.average = function () {
+  if (!this.length)
+    return NaN;
+  let sum = this.reduce((sum, currentValue) => sum + currentValue);
+  return sum / this.length;
 }
-Array.prototype.even=function(){
-  let arr=[],j=0;
-  for(i=0;i<this.length;i++)
-  {
-  if(this[i]%2==0){
-    arr[j++]=this[i];
-  }
-    
-  }
-  return arr;
+Array.prototype.even = function () {
+  return this.filter(x => !(x % 2));
 }
-Array.prototype.odd=function(){
-  let arr=[],j=0;
-  for(i=0;i<this.length;i++)
-  {
-  if(this[i]%2!=0){
-    arr[j++]=this[i];
-  }
-    
-  }
-  return arr;
+Array.prototype.odd = function () {
+  return this.filter(x => x % 2);
 }

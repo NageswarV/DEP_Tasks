@@ -3,11 +3,11 @@
 */
 
 function isSantaClausable(obj) {
-var isSanta;
-if((typeof(obj.sayHoHoHo) === "function") && (typeof(obj.distributeGifts) === "function") && (typeof(obj.goDownTheChimney) === "function")){
-  isSanta= true;
+  var isSanta;
+  if ((typeof (obj.sayHoHoHo) === "function") && (typeof (obj.distributeGifts) === "function") && (typeof (obj.goDownTheChimney) === "function")) {
+    isSanta = true;
   } else {
-  isSanta= false;
+    isSanta = false;
   }
   return isSanta;
-  }
+}
